@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript CRUD</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body >
+
+    <div>
+        <table id="dataTable" style="display:none">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Age</td>
+                    <td>Mobile Number</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody id="tbody" >
+
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="" class="inputFields">
+        <label>First Name</label>
+        <input type="text" name="First Name" data-validation="required|min:3|max:10|regex:^[a-zA-Z\s]+$">
+        <div class="error" style="color: red;" id="First NameErr"></div>
+        <br />
+        <label>Last Name</label>
+        <input type="text" name="Last Name" data-validation="required|min:3|max:10|regex:^[a-zA-Z\s]+$">
+        <div class="error" style="color: red;" id="Last NameErr"></div>
+        <br />
+        <label>Age</label>
+        <input type="number" name="Age" data-validation="required|min:18|max:100">
+        <div class="error" style="color: red;" id="AgeErr"></div>
+        <br />
+        <label>Mobile Number</label>
+        <input type="phone" name="Phone" data-validation="required|min:10|max:12|regex:^[1-9]\d{9}">
+        <div class="error" style="color: red;" id="PhoneErr"></div>
+        <br />
+    </div>
+    <button onclick="validateForm()" value="login">Submit</button>
+
+</body>
+<!-- <script  src="./script.js"></script> -->
+<script src="./WtihArrayScript.js"></script>
+<!-- <script type="module" src="./ValidationFile.js"></script> -->
+
+</html>
